@@ -14,9 +14,9 @@ async function bootstrap() {
   });
 
   app.enableCors({
-    origin: '*',
+    origin: 'https://alaa-fawaz-manea-afm-net-flix-clone-two.vercel.app',
     credentials: true,
-    methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   });
 
   app.use(helmet());
