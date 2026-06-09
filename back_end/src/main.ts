@@ -12,6 +12,13 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     logger: WinstonConfig,
   });
+
+  app.enableCors({
+    origin: true,
+    credentials: true,
+    methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
+  });
+
   app.use(helmet());
   app.useGlobalPipes(
     new ValidationPipe({
@@ -23,11 +30,6 @@ async function bootstrap() {
   app.use(cookieParser());
   app.use(morgan('dev'));
   app.use(json());
-
-  app.enableCors({
-    origin: true,
-    credentials: true,
-  });
 
   // const allowedOrigins = [process.env.CLIENT_URL];
   // app.enableCors({
