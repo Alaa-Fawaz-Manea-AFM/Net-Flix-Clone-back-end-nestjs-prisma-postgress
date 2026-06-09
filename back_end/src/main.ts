@@ -12,26 +12,18 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     logger: WinstonConfig,
   });
-
   app.use(helmet());
-
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
-
       transform: true,
     }),
   );
-
   app.useGlobalFilters(new GlobalExceptionFilter());
-
   app.use(cookieParser());
-
   app.use(morgan('dev'));
-
   app.use(json());
-  const allowedOrigins = ['http://localhost:3000'];
-
+  const allowedOrigins = [process.env.CLIENT_URL];
   app.enableCors({
     origin: (origin, callback) => {
       if (!origin || allowedOrigins.includes(origin)) {
