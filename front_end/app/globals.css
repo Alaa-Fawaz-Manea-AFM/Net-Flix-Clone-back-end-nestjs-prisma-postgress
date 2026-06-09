@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+@theme {
+  --color-custom-red: #e7000b;
+
+  --breakpoint-xs: 375px;
+  --breakpoint-xsm: 425px;
+  --breakpoint-ssm: 525px;
+  --breakpoint-wide: 1440px;
+   --breakpoint-xl: 1700px;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #000000;
+  }
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+  padding: 0;
+  color-scheme: dark;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Lato", sans-serif;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.black-gradient {
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
+}
+
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,16 @@
+export { default as Form_login_signUp } from "./Form_login_signUp";
+export { default as HeroImgSignInUp } from "./HeroImgSignInUp";
+export { default as Skiliton_Slider } from "./Skiliton_Slider";
+export { default as Card_My_heart } from "./Card_My_heart";
+export { default as BtnLogIn_Out } from "./BtnLogIn_Out";
+export { default as HerPageSlid } from "./HerPageSlid";
+export { default as TitleBorder } from "./TitleBorder";
+export { default as MovieItems } from "./MovieItems";
+export { default as Bg_Navbar } from "./Bg_Navbar";
+export { default as ToggleNav } from "./ToggleNav";
+export { default as Skiliton } from "./Skiliton";
+export { default as BtnHeart } from "./BtnHeart";
+export { default as Slider } from "./Slider";
+export { default as Navbar } from "./Navbar";
+export { default as Loader } from "./Loader";
+export { default as Hero } from "./Hero";
