@@ -28,7 +28,7 @@ export class AuthService {
     return {
       httpOnly: true,
       secure: this.config.nodeEnv === 'production',
-      sameSite: 'strict',
+      sameSite: 'none',
       maxAge: this.config.COOKIE_MAX_AGE1,
     };
   };
